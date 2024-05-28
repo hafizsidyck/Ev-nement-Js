@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="cliquerboutton()">click</button>
+    <button id="btn">cliquerencore</button>
+    <p id="paragraphe">Hello world</p>
+    <script>
+      function cliquerboutton() {
+          console.log('button clicked');
+
+      }
+      document.getElementById('btn').onclick = cliquerboutton
+
+     // const btn = document.getElementById('btn')
+      //btn.onclick = function() {
+       // console.log('le boutton cliquer encore à été cliqué');
+        
+      //}
+      //document.getElementById('paragraphe') //pour changer le contenu du p
+     // .addEventListener('click',function() {
+       // document.getElementById('paragraphe').textContent = "paragraphe"
+       // document.getElementById('paragraphe').style.color = "green"
+      //})
+      document.getElementById('paragraphe').addEventListener('click', paragrapheStyle)
+      
+      function paragrapheStyle() {
+        document.getElementById('paragraphe').textContent = "paragraphe"
+        document.getElementById('paragraphe').style.color = "green"
+        
+      }
+    </script>
+  </body>
+</html>
