@@ -28,3 +28,6 @@ function suprimer() {
         })
     })
 }
+
+localStorage.clear()
+localStorage.setItem('text', 'li')

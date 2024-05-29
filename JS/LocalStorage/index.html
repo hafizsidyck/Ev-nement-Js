@@ -48,8 +48,12 @@
             
         } else {
             console.log("ajout d'un nouveau element");
-            maListe.push(fruit)
+            maListe.push(fruit) // ajouter à la fin de la liste
             console.log(maListe);
+            maListe.unshift("pastèque") // ajouter au debut de la liste
+            console.log(maListe);
+            maListe.shift() // pour suprimé premier element
+            maListe.pop() //pour suprimé dernier element
         }
     </script>
 </body>
