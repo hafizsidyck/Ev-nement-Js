@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LocalStorage</h1>
+    <script>
+        //localStorage.setItem('prenom','Hafiz') //pour ajouter un element
+        //localStorage.setItem('nom','Sidyck')
+       //console.log(localStorage.getItem('nom'));
+        //localStorage.removeItem('nom') // pour suprimé un element
+        localStorage.clear() //pour suprimer tous les donnés ou vider le LS
+        let maListe = ["pomme", "banane", "abricot", "ananas"]
+        console.log(maListe);
+        //console.log(maListe[maListe.length-1]);
+        localStorage.setItem('array' ,maListe)
+        console.log(localStorage.getItem('array'));
+        localStorage.setItem("newArray", JSON.stringify(maListe))
+        let newList = localStorage.getItem('newArray')
+        console.log(JSON.parse(newList));
+        for (let item of maListe) { // for of boucle pour parcourir toute la liste
+            console.log(item);
+            
+        }
+        for (let i = 0; i < maListe.length; i++) { // boucle pour parcourir toute la liste
+            console.log(maListe[i]);
+        }
+        console.log(maListe.sort()); // pour afficher du fin vers le debut
+        console.log(maListe.reverse()); // pour afficher du debat vers la fin
+        console.log(maListe.indexOf('ananas')); //pour obtenir l'index d'un element du tableau
+
+        //pour supprimer un element de la liste a partir de son index
+
+        let index = maListe.indexOf('ananas')
+        console.log(maListe.splice(index,1));
+        console.log(maListe);
+        //rechercher un element de la liste
+        console.log(maListe.find(element => element === "banane")); 
+
+        // pour filtrer la liste
+        let fruit = "papaye" // ajoute papaye avec push
+
+        if (maListe.find(element => element === fruit)) {
+            console.log("Elément existe dèjà");
+            
+        } else {
+            console.log("ajout d'un nouveau element");
+            maListe.push(fruit)
+            console.log(maListe);
+        }
+    </script>
+</body>
+</html>
