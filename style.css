@@ -1,0 +1,19 @@
+#task, #add {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+li {
+    position: relative;
+    margin-bottom: 10px;
+}
+li:hover {
+    background: rgb(235, 156, 235);
+}
+li button {
+    position: absolute;
+    right: 5px;
+}
+button {
+    cursor: pointer;
+}
