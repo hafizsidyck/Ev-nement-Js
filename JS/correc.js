@@ -46,7 +46,7 @@ function ajouterTache() {
 }
 
 displayText();
-form.addEventListener('submit',)
+//form.addEventListener('submit',)
 
 // let array = [1, 2, 4, 6, 77, 33, 9, 90]
 // console.log(array.length);
@@ -81,3 +81,30 @@ form.addEventListener('submit',)
 // for (let i=0; i< array.length; i++) {
 //     console.log(i);
 //
+
+
+let tab1 = ["pomme", "goyave", "citron", "ananas"]
+let tab2 = ["tomate", "obergine", "menthe", "haricot"]
+let tab3 = tab1.concat(tab2)
+console.log(tab3);
+tab1.forEach(item => {
+    console.log(item);
+})
+let tab4 = tab1.filter(item => item.length === 6)
+console.log(tab4);
+
+let person = {
+    nom: "Jean",
+    age: 33,
+    notes: [12, 14, 20],
+    address: {
+        ville: 'Pau',
+        codepostale: 64000,
+        rue: 'jean mermoz'
+    }
+}
+console.log(person.nom);
+console.log(person["nom"]);
+console.log(person.address.ville);
+
+person.notes.forEach(e => console.log(e));
